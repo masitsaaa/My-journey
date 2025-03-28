@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: lightblue;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+        }
+        .contact-list li {
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Me</h1>
+        <ul class="contact-list" id="contact-info"></ul>
+    </div>
+    
+    <script>
+        const contactDetails = [
+            "Email: manumasitsa@gmail.com",
+            "Phone: +254 748 318 190",
+            "LinkedIn: <a href='https://linkedin.com/in/example' target='_blank'>linkedin.com/in/example</a>",
+            "Twitter: <a href='https://twitter.com/example' target='_blank'>twitter.com/example</a>"
+            
+        ];
+        
+        function populateContactList() {
+            const list = document.getElementById("contact-info");
+            contactDetails.forEach(detail => {
+                const li = document.createElement("li");
+                li.innerHTML = detail;
+                list.appendChild(li);
+            });
+        }
+        
+        populateContactList();
+    </script>
+</body>
+</html>

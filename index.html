@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body{
+            background-color: #007BFF;
+        }
+        .intro{
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            text-decoration: solid;
+        }
+    </style>
+</head>
+<body>
+    <h1><marquee behavior="scroll" direction="left"><strong><u>Welcome to my homepage</u></strong></marquee> </h1>
+    <p class="intro">Hello there !!! welcome to my page, my name is Emmanuel i am an aspiring software engineer and this where i will be sharing my journey, intrests and aspirations</p>
+
+    <h2>Interests</h2>
+    <ul id="interests"></ul>
+    
+    <h2>Goals</h2>
+    <ol id="goals"></ol>
+
+    <script>
+const interests = ["Cybersecurity", "Machine Learning", "Photography", "Music"];
+const goals = ["Advance in my cybersecurity career", "Contribute to open-source projects", "Learn a new language", "Run a marathon"];
+
+function populateList(id, items) {
+            const list = document.getElementById(id);
+            items.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item;
+                list.appendChild(li);
+            });
+        }
+
+        populateList("interests", interests);
+        populateList("goals", goals);
+    </script>
+
+
+</body>
+</html>

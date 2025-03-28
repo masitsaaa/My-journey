@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: lightblue;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #0288d1;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Career Goals & Dreams</h1>
+        
+        <div class="section">
+            <h2>Short-Term Goals</h2>
+            <ul id="short-term"></ul>
+        </div>
+        
+        <div class="section">
+            <h2>Long-Term Aspirations</h2>
+            <ul id="long-term"></ul>
+        </div>
+        
+        <div class="section">
+            <h2>Dreams for the Future</h2>
+            <ul id="dreams"></ul>
+        </div>
+    </div>
+    
+    <script>
+        const shortTerm = ["Gain advanced cybersecurity certifications", "Lead a data science project", "Improve my public speaking skills"];
+        const longTerm = ["Become a Chief Information Security Officer", "Establish a cybersecurity research lab", "Mentor aspiring data scientists"];
+        const dreams = ["Make a global impact in cybersecurity", "Write a book on insider threat detection", "Travel the world while working remotely"];
+        
+        function populateList(id, items) {
+            const list = document.getElementById(id);
+            items.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item;
+                list.appendChild(li);
+            });
+        }
+        
+        populateList("short-term", shortTerm);
+        populateList("long-term", longTerm);
+        populateList("dreams", dreams);
+    </script>
+</body>
+</html>
